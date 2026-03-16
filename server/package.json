@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
     "prisma:generate": "prisma generate",
@@ -16,7 +17,7 @@
     "prisma": "^6.19.2"
   },
   "dependencies": {
-    "@prisma/client": "^7.4.2",
+    "@prisma/client": "^6.19.2",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
     "dotenv": "^17.3.1",

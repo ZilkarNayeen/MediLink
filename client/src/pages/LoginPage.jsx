@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { API_BASE_URL } from '../config.js'
 
 function LoginPage() {
+  const navigate = useNavigate()
   const [form, setForm] = useState({
     email: '',
     password: '',
@@ -43,7 +44,7 @@ function LoginPage() {
       }
 
       setSuccess('Logged in successfully.')
-      // TODO: navigate to dashboard when it exists
+      navigate('/dashboard')
     } catch (err) {
       setError(err.message)
     } finally {
